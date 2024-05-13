@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Retry Photos</title>
+		<script src="./photo-retry.js" type="module"></script>
+	</head>
+	<body style="font-family:sans-serif; background-color:white; color:black; padding:2rem;">
+
+		<section style="max-width:32rem; margin:0 auto;">
+
+			<img alt="broken image" src="./broken-image.jpg"/>
+
+			<script>
+				window.addEventListener("DOMContentLoaded", () => {
+
+					new PhotoRetry([
+						'https://localhost/a{f}',
+						'https://localhost/b{f}',
+						'https://placehold.co/400x300/'
+					]);
+
+				});
+			</script>
+
+		</section>
+
+	</body>
+</html>
